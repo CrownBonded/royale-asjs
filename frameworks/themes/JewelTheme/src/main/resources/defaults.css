@@ -14,7 +14,6 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-/* BUTTON */
 @namespace j "library://ns.apache.org/royale/jewel";
 @namespace "http://www.w3.org/1999/xhtml";
 .royale *, .royale *:before, .royale *:after {
@@ -32,7 +31,7 @@
 /**
  * Jewel Button
  */
-.button, .textbutton {
+.button, .button:hover, .textbutton, .textbutton:hover {
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -41,29 +40,22 @@
   /* Background: */
   border: none;
   border-radius: 3px;
-  /* TextField */
-  color: rgba(255, 255, 255, 0.4);
-  font-family: "Lato-Bold", sans-serif;
-  font-style: bold;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
-.jewel-button--primary {
+.button--primary {
   background-color: #006CEB;
   transition-duration: 0.4s;
 }
-.jewel-button--primary:hover {
+.button--primary:hover {
   background-color: #0b7bff;
 }
-.jewel-button--primary:active {
+.button--primary:active {
   background-color: #005ecc;
 }
-.jewel-button--primary:focus {
+.button--primary:focus {
   outline: 0;
 }
-.jewel-button--primary [disabled] {
+.button--primary [disabled] {
   background-color: #CCCCCC;
   color: #888888;
   cursor: unset;
@@ -72,10 +64,17 @@
 /**
  * Jewel TextButton
  */
-.textbutton[disabled] {
+.textbutton, .textbutton:hover {
+  /* TextField */
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Lato-Bold", sans-serif;
+  font-style: bold;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.textbutton [disabled] {
   text-shadow: unset;
-  cursor: unset;
-  /* TextField: */
 }
 
 /**
