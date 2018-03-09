@@ -65,7 +65,7 @@
               <path>../src/main/resources/defaults.css</path>
             </include-file> -->
             <include-file>
-              <name>royale-jewel-blue.css</name>
+              <name>royale-jewel-red.css</name>
               <path>../src/main/resources/royale-jewel-blue.css</path>
             </include-file>
           </includeFiles>

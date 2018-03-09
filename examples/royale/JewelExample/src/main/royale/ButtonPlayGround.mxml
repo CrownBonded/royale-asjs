@@ -38,30 +38,28 @@ limitations under the License.
 	<js:Button/>
 	<js:TextButton text="Basic"/>
 
-	<j:Button/>
-	<j:TextButton text="C" />
+	<j:Button primary="true"/>
+	<j:TextButton text="C" primary="true"/>
 
-	<j:TextButton text="Button"/>
+	<j:TextButton text="Button" primary="true"/>
 
-	<j:TextButton text="Button With More Text" />
+	<j:TextButton text="Button With More Text" primary="true"/>
 
-	<j:TextButton text="Button" width="120" height="40" />
-
+	<j:TextButton text="Button" width="120" height="40" primary="true"/>
 	
 	<j:TextButton text="Button" primary="true"/>
 
-	<j:TextButton text="Disabled" >
+	<j:TextButton text="Disabled" primary="true">
 		<j:beads>
 			<j:Disabled/>
 		</j:beads>
 	</j:TextButton>
-	
 
-	<j:Slider id="slider" width="250" value="420" minimum="50" maximum="500"
+	<j:Slider id="slider" width="250" value="100" minimum="50" maximum="500"
 				valueChange="onValueChange(event)"/>
-	<j:Slider id="slider_v" width="250" value="440" minimum="50" maximum="500"
+	<j:Slider id="slider_v" width="250" value="100" minimum="50" maximum="500"
 				valueChange="onValueChange(event)"/>
 
-	<j:TextButton id="button" text="Button" width="420" height="440" />
+	<j:TextButton id="button" text="Button" width="100" height="100" primary="true"/>
 
 </js:Group>

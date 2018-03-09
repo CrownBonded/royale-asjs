@@ -43,14 +43,14 @@
 }
 
 .button--primary {
-  background-color: #006CEB;
+  background-color: #FF0000;
   transition-duration: 0.4s;
 }
 .button--primary:hover {
-  background-color: #0b7bff;
+  background-color: #ff1f1f;
 }
 .button--primary:active {
-  background-color: #005ecc;
+  background-color: #e00000;
 }
 .button--primary:focus {
   outline: 0;
@@ -120,4 +120,4 @@ TextField {
   text-align: left;
 }
 
-/*# sourceMappingURL=royale-jewel-blue.css.map */
+/*# sourceMappingURL=royale-jewel-red.css.map */

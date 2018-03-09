@@ -16,39 +16,5 @@
 //  limitations under the License.
 //
 ////////////////////////////////////////////////////////////////////////////////
- 
-/**
- * Jewel TextButton
- */
-%textbutton-def
-	@extend %button-def
-	/* TextField */
-	color: $white
-	font:
-		family: $font-stack 
-		style: bold 
-		size: .7rem 
-	//+trans(0.2s ease-in-out)
-	text:
-		transform: uppercase
-		decoration: none 
-		//shadow: 0 .063em rgba(black,.3)
-
-	[disabled]
-		text:
-			shadow: unset
-
-.textbutton, .textbutton:hover
-	@extend %textbutton-def
-
-// /* TextField: */
-//	font-family: $font-stack
-//	font-size: 14px
-//	font-weight: bold
-//	color: $font-normal-color
-//	text-shadow: 0 1px 0 #555
-
-//	padding: 10px 0px
-//	display: inline-block
-//	min-width: 80px
-
+// Color Themes
+$primary-color: #FF0000
