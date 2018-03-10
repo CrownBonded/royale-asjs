@@ -35,9 +35,9 @@
   cursor: pointer;
   display: inline-block;
   margin: 0;
-  padding: 10px 0px;
+  padding: 10px 16px;
   min-width: 74px;
-  min-height: 1em;
+  min-height: 34px;
   /* Background: */
   border: none;
   border-radius: 3px;
