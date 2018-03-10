@@ -33,13 +33,15 @@
 		transform: uppercase
 		decoration: none 
 		//shadow: 0 .063em rgba(black,.3)
-
 	[disabled]
 		text:
 			shadow: unset
 
-.textbutton, .textbutton:hover
+.jewel.textbutton, .jewel.textbutton:hover
 	@extend %textbutton-def
+
+.jewel.textbutton.primary
+	+button-theme($primary-color)
 
 // /* TextField: */
 //	font-family: $font-stack
