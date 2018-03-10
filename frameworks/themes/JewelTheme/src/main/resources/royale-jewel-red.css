@@ -31,31 +31,32 @@
 /**
  * Jewel Button
  */
-.button, .button:hover, .textbutton, .textbutton:hover {
+.jewel.button, .jewel.button:hover, .jewel.textbutton, .jewel.textbutton:hover {
   cursor: pointer;
   display: inline-block;
   margin: 0;
   padding: 10px 0px;
   min-width: 74px;
+  min-height: 1em;
   /* Background: */
   border: none;
   border-radius: 3px;
 }
 
-.button--primary {
+.jewel.button.primary {
   background-color: #FF0000;
   transition-duration: 0.4s;
 }
-.button--primary:hover {
+.jewel.button.primary:hover {
   background-color: #ff1f1f;
 }
-.button--primary:active {
+.jewel.button.primary:active {
   background-color: #e00000;
 }
-.button--primary:focus {
+.jewel.button.primary:focus {
   outline: 0;
 }
-.button--primary [disabled] {
+.jewel.button.primary[disabled] {
   background-color: #CCCCCC;
   color: #888888;
   cursor: unset;
@@ -64,7 +65,7 @@
 /**
  * Jewel TextButton
  */
-.textbutton, .textbutton:hover {
+.jewel.textbutton, .jewel.textbutton:hover {
   /* TextField */
   color: rgba(255, 255, 255, 0.9);
   font-family: "Lato-Bold", sans-serif;
@@ -73,8 +74,27 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-.textbutton [disabled] {
+.jewel.textbutton [disabled] {
   text-shadow: unset;
+}
+
+.jewel.textbutton.primary {
+  background-color: #FF0000;
+  transition-duration: 0.4s;
+}
+.jewel.textbutton.primary:hover {
+  background-color: #ff1f1f;
+}
+.jewel.textbutton.primary:active {
+  background-color: #e00000;
+}
+.jewel.textbutton.primary:focus {
+  outline: 0;
+}
+.jewel.textbutton.primary[disabled] {
+  background-color: #CCCCCC;
+  color: #888888;
+  cursor: unset;
 }
 
 /**

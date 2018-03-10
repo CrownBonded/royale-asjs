@@ -86,7 +86,7 @@ package org.apache.royale.jewel
         private var _primary:Boolean = false;
 
         /**
-		 *  A boolean flag to activate "button--primary" effect selector.
+		 *  A boolean flag to activate "primary" effect selector.
 		 *  Applies primary color display effect.
          *  Colors are defined in royale-jewel.css
          *
@@ -108,7 +108,7 @@ package org.apache.royale.jewel
 
                 COMPILE::JS
                 {
-                    addOrRemove("button--primary",value);
+                    addOrRemove("primary",value);
                     setClassName(computeFinalClassNames());
                 }
             }
