@@ -37,8 +37,18 @@
 .jewel.button, .jewel.button:hover
 	@extend %button-def
 
+.jewel.button
+	+button-theme($default-color, $default-font-color)
+
 .jewel.button.primary
-	+button-theme($primary-color)
+	+button-theme($primary-color, $font-color)
+
+.jewel.button.secondary
+	+button-theme($secondary-color, $font-color)
+
+.jewel.button.emphasized
+	+button-theme($emphasized-color, $font-color)
+
 
 //SVGs
 //border:1px; /*without this svg shows scaled and bigger*/

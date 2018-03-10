@@ -113,8 +113,69 @@ package org.apache.royale.jewel
                 }
             }
         }
+        
+        private var _secondary:Boolean = false;
 
+        /**
+		 *  A boolean flag to activate "secondary" effect selector.
+		 *  Applies secondary color display effect.
+         *  Colors are defined in royale-jewel.css
+         *
+		 *  @langversion 3.0
+		 *  @playerversion Flash 10.2
+		 *  @playerversion AIR 2.6
+		 *  @productversion Royale 0.9.2
+		 */
+        public function get secondary():Boolean
+        {
+            return _secondary;
+        }
 
+        public function set secondary(value:Boolean):void
+        {
+            if (_secondary != value)
+            {
+                _secondary = value;
+
+                COMPILE::JS
+                {
+                    addOrRemove("secondary",value);
+                    setClassName(computeFinalClassNames());
+                }
+            }
+        }
+
+        private var _emphasized:Boolean = false;
+
+        /**
+		 *  A boolean flag to activate "emphasized" effect selector.
+		 *  Applies emphasized color display effect.
+         *  Colors are defined in royale-jewel.css
+         *
+		 *  @langversion 3.0
+		 *  @playerversion Flash 10.2
+		 *  @playerversion AIR 2.6
+		 *  @productversion Royale 0.9.2
+		 */
+        public function get emphasized():Boolean
+        {
+            return _emphasized;
+        }
+
+        public function set emphasized(value:Boolean):void
+        {
+            if (_emphasized != value)
+            {
+                _emphasized = value;
+
+                COMPILE::JS
+                {
+                    addOrRemove("emphasized",value);
+                    setClassName(computeFinalClassNames());
+                }
+            }
+        }
+        
 
         COMPILE::JS
         protected function addOrRemove(classNameVal:String,add:Boolean):void

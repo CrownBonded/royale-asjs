@@ -23,7 +23,6 @@
 %textbutton-def
 	@extend %button-def
 	/* TextField */
-	color: $white
 	font:
 		family: $font-stack 
 		style: bold 
@@ -40,8 +39,17 @@
 .jewel.textbutton, .jewel.textbutton:hover
 	@extend %textbutton-def
 
+.jewel.textbutton
+	+button-theme($default-color, $default-font-color)
+
 .jewel.textbutton.primary
-	+button-theme($primary-color)
+	+button-theme($primary-color, $font-color)
+
+.jewel.textbutton.secondary
+	+button-theme($secondary-color, $font-color)
+
+.jewel.textbutton.emphasized
+	+button-theme($emphasized-color, $font-color)
 
 // /* TextField: */
 //	font-family: $font-stack
