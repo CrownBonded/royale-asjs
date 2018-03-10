@@ -35,19 +35,24 @@ limitations under the License.
 		<js:VerticalLayoutWithPaddingAndGap gap="10"/>
 	</js:beads>
 	
+	<js:Label text="Basic"/>
 	<js:Button/>
 	<js:TextButton text="Basic"/>
 
+	<js:Label text="Jewel Button"/>
 	<j:Button primary="true"/>
-	<j:TextButton text="C" primary="true"/>
 
-	<j:TextButton text="Button" primary="true"/>
-
-	<j:TextButton text="Button With More Text" primary="true"/>
-
-	<j:TextButton text="Button" width="120" height="40" primary="true"/>
+	<js:Label text="Jewel TextButton"/>
 	
-	<j:TextButton text="Button" primary="true"/>
+	<j:TextButton text="DEFAULT"/>
+
+	<j:TextButton text="Button With More Text"/>
+
+	<j:TextButton text="PRIMARY" primary="true"/>
+
+	<j:TextButton text="SECONDARY" secondary="true"/>
+
+	<j:TextButton text="EMPHASIZED" emphasized="true"/>
 
 	<j:TextButton text="Disabled" primary="true">
 		<j:beads>
@@ -55,11 +60,12 @@ limitations under the License.
 		</j:beads>
 	</j:TextButton>
 
-	<j:Slider id="slider" width="250" value="100" minimum="50" maximum="500"
+	<js:Label text="Jewel Button Sizing (respect min values)"/>
+	<j:Slider id="slider" width="250" value="100" minimum="0" maximum="500"
 				valueChange="onValueChange(event)"/>
-	<j:Slider id="slider_v" width="250" value="100" minimum="50" maximum="500"
+	<j:Slider id="slider_v" width="250" value="40" minimum="0" maximum="300"
 				valueChange="onValueChange(event)"/>
 
-	<j:TextButton id="button" text="Button" width="100" height="100" primary="true"/>
+	<j:TextButton id="button" text="Button" width="100" height="40" primary="true"/>
 
 </js:Group>
