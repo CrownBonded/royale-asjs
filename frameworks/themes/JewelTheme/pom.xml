@@ -41,17 +41,6 @@
         <version>${royale.compiler.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <namespaces>
-            <namespace>
-              <uri>library://ns.apache.org/royale/jewel</uri>
-              <manifest>${project.basedir}/src/main/resources/jewel-theme-manifest.xml</manifest>
-            </namespace>
-            <namespace>
-              <type>as</type>
-              <uri>library://ns.apache.org/royale/jewel</uri>
-              <manifest>${project.basedir}/src/main/resources/jewel-theme-as-manifest.xml</manifest>
-            </namespace>
-          </namespaces>
           <includeClasses>
             <includeClass>JewelThemeClasses</includeClass>
           </includeClasses>
@@ -60,12 +49,8 @@
               <name>assets/*</name>
               <path>../src/main/resources/assets/*</path>
             </include-file>
-            <!-- <include-file>
-              <name>defaults.css</name>
-              <path>../src/main/resources/defaults.css</path>
-            </include-file> -->
             <include-file>
-              <name>royale-jewel-red.css</name>
+              <name>royale-jewel-blue.css</name>
               <path>../src/main/resources/royale-jewel-blue.css</path>
             </include-file>
           </includeFiles>
