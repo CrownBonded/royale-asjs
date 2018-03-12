@@ -24,7 +24,6 @@ package org.apache.royale.jewel
     {
         import org.apache.royale.core.WrappedHTMLElement;
         import org.apache.royale.html.util.addElementToWrapper;
-        import org.apache.royale.core.CSSClassList;
     }
 
     /**
@@ -61,39 +60,12 @@ package org.apache.royale.jewel
 			super();
 
             typeNames = "jewel button";
-
-            COMPILE::JS
-            {
-                _classList = new CSSClassList();
-            }
 		}
-
-        COMPILE::JS
-        protected var _classList:CSSClassList;
-
-        /**
-		 * @private
-		 * @royaleignorecoercion org.apache.royale.core.WrappedHTMLElement
-		 */
-		/*COMPILE::JS
-		override protected function createElement():WrappedHTMLElement
-		{
-			addElementToWrapper(this,'button');
-            element.setAttribute('type', 'button');
-			typeNames = "jewel button";
-			return element;
-		}*/
-
-        COMPILE::JS
-        protected function addOrRemove(classNameVal:String,add:Boolean):void
-        {
-            add ? _classList.add(classNameVal) : _classList.remove(classNameVal);
-        }
 
         COMPILE::JS
         override protected function computeFinalClassNames():String
         {
-            return super.computeFinalClassNames() + " " + _classList.compute();
+            return super.computeFinalClassNames() + " " + element.classList;
         }
 
         private var _primary:Boolean = false;
@@ -121,7 +93,8 @@ package org.apache.royale.jewel
 
                 COMPILE::JS
                 {
-                    addOrRemove("primary",value);
+                    
+                    element.classList.toggle("primary", value);
                     setClassName(computeFinalClassNames());
                 }
             }
@@ -152,7 +125,7 @@ package org.apache.royale.jewel
 
                 COMPILE::JS
                 {
-                    addOrRemove("secondary",value);
+                    element.classList.toggle("secondary", value);
                     setClassName(computeFinalClassNames());
                 }
             }
@@ -183,7 +156,7 @@ package org.apache.royale.jewel
 
                 COMPILE::JS
                 {
-                    addOrRemove("emphasized",value);
+                    element.classList.toggle("emphasized", value);
                     setClassName(computeFinalClassNames());
                 }
             }

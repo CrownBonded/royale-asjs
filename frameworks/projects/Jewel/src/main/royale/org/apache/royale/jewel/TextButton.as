@@ -125,18 +125,5 @@ package org.apache.royale.jewel
                 this.dispatchEvent('textChange');
             }
 		}
-        
-        /**
-		 * @private
-		 * @royaleignorecoercion org.apache.royale.core.WrappedHTMLElement
-		 */
-		/*COMPILE::JS
-		override protected function createElement():WrappedHTMLElement
-		{
-			addElementToWrapper(this,'button');
-            element.setAttribute('type', 'button');
-			typeNames = "jewel textbutton";
-			return element;
-        }*/
 	}
 }
