@@ -60,6 +60,8 @@ package org.apache.royale.jewel
 		{
 			super();
 
+            typeNames = "jewel button";
+
             COMPILE::JS
             {
                 _classList = new CSSClassList();
@@ -73,15 +75,26 @@ package org.apache.royale.jewel
 		 * @private
 		 * @royaleignorecoercion org.apache.royale.core.WrappedHTMLElement
 		 */
-		COMPILE::JS
+		/*COMPILE::JS
 		override protected function createElement():WrappedHTMLElement
 		{
 			addElementToWrapper(this,'button');
             element.setAttribute('type', 'button');
 			typeNames = "jewel button";
 			return element;
-		}
+		}*/
 
+        COMPILE::JS
+        protected function addOrRemove(classNameVal:String,add:Boolean):void
+        {
+            add ? _classList.add(classNameVal) : _classList.remove(classNameVal);
+        }
+
+        COMPILE::JS
+        override protected function computeFinalClassNames():String
+        {
+            return super.computeFinalClassNames() + " " + _classList.compute();
+        }
 
         private var _primary:Boolean = false;
 
@@ -174,19 +187,6 @@ package org.apache.royale.jewel
                     setClassName(computeFinalClassNames());
                 }
             }
-        }
-        
-
-        COMPILE::JS
-        protected function addOrRemove(classNameVal:String,add:Boolean):void
-        {
-            add ? _classList.add(classNameVal) : _classList.remove(classNameVal);
-        }
-
-        COMPILE::JS
-        override protected function computeFinalClassNames():String
-        {
-            return _classList.compute() + super.computeFinalClassNames();
         }
 	}
 }
