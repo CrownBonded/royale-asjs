@@ -50,6 +50,8 @@ package org.apache.royale.jewel
 		public function TextButton()
 		{
 			super();
+
+            typeNames = "jewel textbutton";
 		}
         
         /**
@@ -128,13 +130,13 @@ package org.apache.royale.jewel
 		 * @private
 		 * @royaleignorecoercion org.apache.royale.core.WrappedHTMLElement
 		 */
-		COMPILE::JS
+		/*COMPILE::JS
 		override protected function createElement():WrappedHTMLElement
 		{
 			addElementToWrapper(this,'button');
             element.setAttribute('type', 'button');
 			typeNames = "jewel textbutton";
 			return element;
-		}
+        }*/
 	}
 }
